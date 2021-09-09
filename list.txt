@@ -1,0 +1,101 @@
++--------+-----------+--------------------------------------------+------------------------+----------------------------------------------------------------------------+--------------+
+| Domain | Method    | URI                                        | Name                   | Action                                                                     | Middleware   |
++--------+-----------+--------------------------------------------+------------------------+----------------------------------------------------------------------------+--------------+
+|        | GET|HEAD  | /                                          |                        | Closure                                                                    | web          |
+|        | POST      | admin/anbar                                | anbar.store            | App\Http\Controllers\Admin\Seminar\Define\AnbarsController@store           | web          |
+|        | GET|HEAD  | admin/anbar                                | anbar.index            | App\Http\Controllers\Admin\Seminar\Define\AnbarsController@index           | web          |
+|        | GET|HEAD  | admin/anbar/create                         | anbar.create           | App\Http\Controllers\Admin\Seminar\Define\AnbarsController@create          | web          |
+|        | DELETE    | admin/anbar/{anbar}                        | anbar.destroy          | App\Http\Controllers\Admin\Seminar\Define\AnbarsController@destroy         | web          |
+|        | PUT|PATCH | admin/anbar/{anbar}                        | anbar.update           | App\Http\Controllers\Admin\Seminar\Define\AnbarsController@update          | web          |
+|        | GET|HEAD  | admin/anbar/{anbar}                        | anbar.show             | App\Http\Controllers\Admin\Seminar\Define\AnbarsController@show            | web          |
+|        | GET|HEAD  | admin/anbar/{anbar}/edit                   | anbar.edit             | App\Http\Controllers\Admin\Seminar\Define\AnbarsController@edit            | web          |
+|        | POST      | admin/city                                 | city.store             | App\Http\Controllers\Admin\Seminar\Define\CitiesController@store           | web          |
+|        | GET|HEAD  | admin/city                                 | city.index             | App\Http\Controllers\Admin\Seminar\Define\CitiesController@index           | web          |
+|        | GET|HEAD  | admin/city/create                          | city.create            | App\Http\Controllers\Admin\Seminar\Define\CitiesController@create          | web          |
+|        | PUT|PATCH | admin/city/{city}                          | city.update            | App\Http\Controllers\Admin\Seminar\Define\CitiesController@update          | web          |
+|        | DELETE    | admin/city/{city}                          | city.destroy           | App\Http\Controllers\Admin\Seminar\Define\CitiesController@destroy         | web          |
+|        | GET|HEAD  | admin/city/{city}                          | city.show              | App\Http\Controllers\Admin\Seminar\Define\CitiesController@show            | web          |
+|        | GET|HEAD  | admin/city/{city}/edit                     | city.edit              | App\Http\Controllers\Admin\Seminar\Define\CitiesController@edit            | web          |
+|        | GET|HEAD  | admin/city/{id}/addr                       |                        | App\Http\Controllers\Admin\Seminar\SeminarAjaxControler@getAddrByCityId    | web          |
+|        | GET|HEAD  | admin/employee                             | employee.index         | App\Http\Controllers\Admin\Seminar\Define\SeminarEmpsController@index      | web          |
+|        | POST      | admin/employee                             | employee.store         | App\Http\Controllers\Admin\Seminar\Define\SeminarEmpsController@store      | web          |
+|        | GET|HEAD  | admin/employee/create                      | employee.create        | App\Http\Controllers\Admin\Seminar\Define\SeminarEmpsController@create     | web          |
+|        | GET|HEAD  | admin/employee/{employee}                  | employee.show          | App\Http\Controllers\Admin\Seminar\Define\SeminarEmpsController@show       | web          |
+|        | PUT|PATCH | admin/employee/{employee}                  | employee.update        | App\Http\Controllers\Admin\Seminar\Define\SeminarEmpsController@update     | web          |
+|        | DELETE    | admin/employee/{employee}                  | employee.destroy       | App\Http\Controllers\Admin\Seminar\Define\SeminarEmpsController@destroy    | web          |
+|        | GET|HEAD  | admin/employee/{employee}/edit             | employee.edit          | App\Http\Controllers\Admin\Seminar\Define\SeminarEmpsController@edit       | web          |
+|        | GET|HEAD  | admin/getgroupbyid/{id}                    |                        | App\Http\Controllers\Admin\Seminar\SeminarAjaxControler@getGroupById       | web          |
+|        | POST      | admin/group                                | group.store            | App\Http\Controllers\Admin\Seminar\Define\GroupsController@store           | web          |
+|        | GET|HEAD  | admin/group                                | group.index            | App\Http\Controllers\Admin\Seminar\Define\GroupsController@index           | web          |
+|        | POST      | admin/group-role                           | group-role.store       | App\Http\Controllers\Admin\Seminar\Define\GrouproleController@store        | web          |
+|        | GET|HEAD  | admin/group-role                           | group-role.index       | App\Http\Controllers\Admin\Seminar\Define\GrouproleController@index        | web          |
+|        | GET|HEAD  | admin/group-role/create                    | group-role.create      | App\Http\Controllers\Admin\Seminar\Define\GrouproleController@create       | web          |
+|        | PUT|PATCH | admin/group-role/{group_role}              | group-role.update      | App\Http\Controllers\Admin\Seminar\Define\GrouproleController@update       | web          |
+|        | GET|HEAD  | admin/group-role/{group_role}              | group-role.show        | App\Http\Controllers\Admin\Seminar\Define\GrouproleController@show         | web          |
+|        | DELETE    | admin/group-role/{group_role}              | group-role.destroy     | App\Http\Controllers\Admin\Seminar\Define\GrouproleController@destroy      | web          |
+|        | GET|HEAD  | admin/group-role/{group_role}/edit         | group-role.edit        | App\Http\Controllers\Admin\Seminar\Define\GrouproleController@edit         | web          |
+|        | GET|HEAD  | admin/group-user                           | group-user.index       | App\Http\Controllers\Admin\Seminar\Define\GroupuserController@index        | web          |
+|        | POST      | admin/group-user                           | group-user.store       | App\Http\Controllers\Admin\Seminar\Define\GroupuserController@store        | web          |
+|        | GET|HEAD  | admin/group-user/create                    | group-user.create      | App\Http\Controllers\Admin\Seminar\Define\GroupuserController@create       | web          |
+|        | PUT|PATCH | admin/group-user/{group_user}              | group-user.update      | App\Http\Controllers\Admin\Seminar\Define\GroupuserController@update       | web          |
+|        | GET|HEAD  | admin/group-user/{group_user}              | group-user.show        | App\Http\Controllers\Admin\Seminar\Define\GroupuserController@show         | web          |
+|        | DELETE    | admin/group-user/{group_user}              | group-user.destroy     | App\Http\Controllers\Admin\Seminar\Define\GroupuserController@destroy      | web          |
+|        | GET|HEAD  | admin/group-user/{group_user}/edit         | group-user.edit        | App\Http\Controllers\Admin\Seminar\Define\GroupuserController@edit         | web          |
+|        | GET|HEAD  | admin/group/create                         | group.create           | App\Http\Controllers\Admin\Seminar\Define\GroupsController@create          | web          |
+|        | DELETE    | admin/group/{group}                        | group.destroy          | App\Http\Controllers\Admin\Seminar\Define\GroupsController@destroy         | web          |
+|        | PUT|PATCH | admin/group/{group}                        | group.update           | App\Http\Controllers\Admin\Seminar\Define\GroupsController@update          | web          |
+|        | GET|HEAD  | admin/group/{group}                        | group.show             | App\Http\Controllers\Admin\Seminar\Define\GroupsController@show            | web          |
+|        | GET|HEAD  | admin/group/{group}/edit                   | group.edit             | App\Http\Controllers\Admin\Seminar\Define\GroupsController@edit            | web          |
+|        | POST      | admin/ostan                                | ostan.store            | App\Http\Controllers\Admin\Seminar\Define\OstansController@store           | web          |
+|        | GET|HEAD  | admin/ostan                                | ostan.index            | App\Http\Controllers\Admin\Seminar\Define\OstansController@index           | web          |
+|        | GET|HEAD  | admin/ostan/create                         | ostan.create           | App\Http\Controllers\Admin\Seminar\Define\OstansController@create          | web          |
+|        | GET|HEAD  | admin/ostan/{id}/cities                    |                        | App\Http\Controllers\Admin\Seminar\SeminarAjaxControler@getCityByOstanId   | web          |
+|        | DELETE    | admin/ostan/{ostan}                        | ostan.destroy          | App\Http\Controllers\Admin\Seminar\Define\OstansController@destroy         | web          |
+|        | PUT|PATCH | admin/ostan/{ostan}                        | ostan.update           | App\Http\Controllers\Admin\Seminar\Define\OstansController@update          | web          |
+|        | GET|HEAD  | admin/ostan/{ostan}                        | ostan.show             | App\Http\Controllers\Admin\Seminar\Define\OstansController@show            | web          |
+|        | GET|HEAD  | admin/ostan/{ostan}/edit                   | ostan.edit             | App\Http\Controllers\Admin\Seminar\Define\OstansController@edit            | web          |
+|        | GET|HEAD  | admin/phonenumber                          | phonenumber.index      | App\Http\Controllers\Admin\Seminar\Define\PhonenumbersController@index     | web          |
+|        | POST      | admin/phonenumber                          | phonenumber.store      | App\Http\Controllers\Admin\Seminar\Define\PhonenumbersController@store     | web          |
+|        | GET|HEAD  | admin/phonenumber/create                   | phonenumber.create     | App\Http\Controllers\Admin\Seminar\Define\PhonenumbersController@create    | web          |
+|        | GET|HEAD  | admin/phonenumber/{phonenumber}            | phonenumber.show       | App\Http\Controllers\Admin\Seminar\Define\PhonenumbersController@show      | web          |
+|        | DELETE    | admin/phonenumber/{phonenumber}            | phonenumber.destroy    | App\Http\Controllers\Admin\Seminar\Define\PhonenumbersController@destroy   | web          |
+|        | PUT|PATCH | admin/phonenumber/{phonenumber}            | phonenumber.update     | App\Http\Controllers\Admin\Seminar\Define\PhonenumbersController@update    | web          |
+|        | GET|HEAD  | admin/phonenumber/{phonenumber}/edit       | phonenumber.edit       | App\Http\Controllers\Admin\Seminar\Define\PhonenumbersController@edit      | web          |
+|        | GET|HEAD  | admin/role                                 | role.index             | App\Http\Controllers\Admin\Seminar\Define\RolesController@index            | web          |
+|        | POST      | admin/role                                 | role.store             | App\Http\Controllers\Admin\Seminar\Define\RolesController@store            | web          |
+|        | GET|HEAD  | admin/role/create                          | role.create            | App\Http\Controllers\Admin\Seminar\Define\RolesController@create           | web          |
+|        | GET|HEAD  | admin/role/{role}                          | role.show              | App\Http\Controllers\Admin\Seminar\Define\RolesController@show             | web          |
+|        | PUT|PATCH | admin/role/{role}                          | role.update            | App\Http\Controllers\Admin\Seminar\Define\RolesController@update           | web          |
+|        | DELETE    | admin/role/{role}                          | role.destroy           | App\Http\Controllers\Admin\Seminar\Define\RolesController@destroy          | web          |
+|        | GET|HEAD  | admin/role/{role}/edit                     | role.edit              | App\Http\Controllers\Admin\Seminar\Define\RolesController@edit             | web          |
+|        | POST      | admin/sans                                 | sans.store             | App\Http\Controllers\Admin\Seminar\Define\SansController@store             | web          |
+|        | GET|HEAD  | admin/sans                                 | sans.index             | App\Http\Controllers\Admin\Seminar\Define\SansController@index             | web          |
+|        | GET|HEAD  | admin/sans/create                          | sans.create            | App\Http\Controllers\Admin\Seminar\Define\SansController@create            | web          |
+|        | GET|HEAD  | admin/sans/{san}                           | sans.show              | App\Http\Controllers\Admin\Seminar\Define\SansController@show              | web          |
+|        | DELETE    | admin/sans/{san}                           | sans.destroy           | App\Http\Controllers\Admin\Seminar\Define\SansController@destroy           | web          |
+|        | PUT|PATCH | admin/sans/{san}                           | sans.update            | App\Http\Controllers\Admin\Seminar\Define\SansController@update            | web          |
+|        | GET|HEAD  | admin/sans/{san}/edit                      | sans.edit              | App\Http\Controllers\Admin\Seminar\Define\SansController@edit              | web          |
+|        | GET|HEAD  | admin/sansuser-semat                       | sansuser-semat.index   | App\Http\Controllers\Admin\Seminar\Define\SansusersematController@index    | web          |
+|        | POST      | admin/sansuser-semat                       | sansuser-semat.store   | App\Http\Controllers\Admin\Seminar\Define\SansusersematController@store    | web          |
+|        | GET|HEAD  | admin/sansuser-semat/create                | sansuser-semat.create  | App\Http\Controllers\Admin\Seminar\Define\SansusersematController@create   | web          |
+|        | PUT|PATCH | admin/sansuser-semat/{sansuser_semat}      | sansuser-semat.update  | App\Http\Controllers\Admin\Seminar\Define\SansusersematController@update   | web          |
+|        | GET|HEAD  | admin/sansuser-semat/{sansuser_semat}      | sansuser-semat.show    | App\Http\Controllers\Admin\Seminar\Define\SansusersematController@show     | web          |
+|        | DELETE    | admin/sansuser-semat/{sansuser_semat}      | sansuser-semat.destroy | App\Http\Controllers\Admin\Seminar\Define\SansusersematController@destroy  | web          |
+|        | GET|HEAD  | admin/sansuser-semat/{sansuser_semat}/edit | sansuser-semat.edit    | App\Http\Controllers\Admin\Seminar\Define\SansusersematController@edit     | web          |
+|        | GET|HEAD  | admin/semat                                | semat.index            | App\Http\Controllers\Admin\Seminar\Define\SematsController@index           | web          |
+|        | POST      | admin/semat                                | semat.store            | App\Http\Controllers\Admin\Seminar\Define\SematsController@store           | web          |
+|        | GET|HEAD  | admin/semat/create                         | semat.create           | App\Http\Controllers\Admin\Seminar\Define\SematsController@create          | web          |
+|        | DELETE    | admin/semat/{semat}                        | semat.destroy          | App\Http\Controllers\Admin\Seminar\Define\SematsController@destroy         | web          |
+|        | PUT|PATCH | admin/semat/{semat}                        | semat.update           | App\Http\Controllers\Admin\Seminar\Define\SematsController@update          | web          |
+|        | GET|HEAD  | admin/semat/{semat}                        | semat.show             | App\Http\Controllers\Admin\Seminar\Define\SematsController@show            | web          |
+|        | GET|HEAD  | admin/semat/{semat}/edit                   | semat.edit             | App\Http\Controllers\Admin\Seminar\Define\SematsController@edit            | web          |
+|        | POST      | admin/seminar                              | seminar.store          | App\Http\Controllers\Admin\Seminar\Define\SeminarsController@store         | web          |
+|        | GET|HEAD  | admin/seminar                              | seminar.index          | App\Http\Controllers\Admin\Seminar\Define\SeminarsController@index         | web          |
+|        | GET|HEAD  | admin/seminar/create                       | seminar.create         | App\Http\Controllers\Admin\Seminar\Define\SeminarsController@create        | web          |
+|        | GET|HEAD  | admin/seminar/{id}/sans                    |                        | App\Http\Controllers\Admin\Seminar\SeminarAjaxControler@getSansBySeminarId | web          |
+|        | DELETE    | admin/seminar/{seminar}                    | seminar.destroy        | App\Http\Controllers\Admin\Seminar\Define\SeminarsController@destroy       | web          |
+|        | PUT|PATCH | admin/seminar/{seminar}                    | seminar.update         | App\Http\Controllers\Admin\Seminar\Define\SeminarsController@update        | web          |
+|        | GET|HEAD  | admin/seminar/{seminar}                    | seminar.show           | App\Http\Controllers\Admin\Seminar\Define\SeminarsController@show          | web          |
+|        | GET|HEAD  | admin/seminar/{seminar}/edit               | seminar.edit           | App\Http\Controllers\Admin\Seminar\Define\SeminarsController@edit          | web          |
+|        | GET|HEAD  | api/user                                   |                        | Closure                                                                    | api,auth:api |
++--------+-----------+--------------------------------------------+------------------------+----------------------------------------------------------------------------+--------------+
