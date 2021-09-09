@@ -1,0 +1,50 @@
+[1mdiff --git a/app/Http/Controllers/TestController.php b/app/Http/Controllers/TestController.php[m
+[1mindex 7b90f91..80d1de8 100644[m
+[1m--- a/app/Http/Controllers/TestController.php[m
+[1m+++ b/app/Http/Controllers/TestController.php[m
+[36m@@ -26,44 +26,7 @@[m [mclass TestController extends Controller[m
+     }[m
+     public function test()[m
+     {[m
+[31m-//        $seminarsans= $this->seminarsansuserRepo->getAllSeminarSan();[m
+[31m-//        return $seminarsans->seminarsan->;[m
+[31m-//        return $this->seminarRepo->checkSansExists(41);[m
+[31m-//        $q = DB::table("users")->select('*')->whereNotIn('id',function($query) {[m
+[31m-//[m
+[31m-//            $query->select('user_id')->from('seminarsan_modirs');[m
+[31m-//[m
+[31m-//        })->get();[m
+[31m-//        dd($q);[m
+[31m-[m
+[31m-//        dd(Group::find(1)->users);[m
+[31m-//        $q = DB::table("users")->select('*')->whereIn('id',function($query) {[m
+[31m-//[m
+[31m-//            $query->select('user_id')->from('seminarsan_modirs');[m
+[31m-//[m
+[31m-//        })->get();[m
+[31m-//        $users = seminar_karshens_modir::where('modir_id', 1)->get();[m
+[31m-//        $users = seminar_karshens_modir::with('user')->whereNotIn('modir_id', 1)->get();[m
+[31m-//       foreach ($users as $u){[m
+[31m-//           return $u->id;[m
+[31m-//       }[m
+[31m-//        $user =DB::table("users")->select('*')->whereNotIn('id',function($query) {[m
+[31m-//            $query->select('user_id')->from('seminarsan_modirs');[m
+[31m-//        })->whereNotIn('id', function ($q){[m
+[31m-//            $q->select('user_id')->from('group_user')->where('group_id', 1);[m
+[31m-//        })->get();[m
+[31m-//        return $user;[m
+[31m-//        $users = seminar_karshens_modir::where('modir_id', 1)->get();[m
+[31m-//[m
+[31m-//            $user = seminar_karshens_modir::with(['user'])->where('modir_id', 1)->get();[m
+[31m-//            foreach($user as $u){[m
+[31m-//                return $u->user->name. '' .$u->user->family;[m
+[31m-//            }[m
+[31m-[m
+[31m-//            $users = seminar_karshens_modir::with(['user','modir','seminar','city'])->where('modir_id', 1)->get();[m
+[31m-//            foreach($users as $u){[m
+[31m-//                dd($u->user->name);[m
+[31m-//            }[m
+[32m+[m[32mecho "salam":[m
+     }[m
+ [m
+ }[m
