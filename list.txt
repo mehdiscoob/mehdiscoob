@@ -3,7 +3,7 @@
 +--------+-----------+--------------------------------------------+------------------------+----------------------------------------------------------------------------+--------------+
 |        | GET|HEAD  | /                                          |                        | Closure                                                                    | web          |
 |        | POST      | admin/anbar                                | anbar.store            | App\Http\Controllers\Admin\Seminar\Define\AnbarsController@store           | web          |
-|        | gay|HEAD  | admin/anbar                                | anbar.index            | App\Http\Controllers\Admin\Seminar\Define\AnbarsController@index           | web          |
+|        | GET|HEAD  | admin/anbar                                | anbar.index            | App\Http\Controllers\Admin\Seminar\Define\AnbarsController@index           | web          |
 |        | GET|HEAD  | admin/anbar/create                         | anbar.create           | App\Http\Controllers\Admin\Seminar\Define\AnbarsController@create          | web          |
 |        | DELETE    | admin/anbar/{anbar}                        | anbar.destroy          | App\Http\Controllers\Admin\Seminar\Define\AnbarsController@destroy         | web          |
 |        | PUT|PATCH | admin/anbar/{anbar}                        | anbar.update           | App\Http\Controllers\Admin\Seminar\Define\AnbarsController@update          | web          |
